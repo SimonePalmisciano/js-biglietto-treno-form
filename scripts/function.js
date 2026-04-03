@@ -11,9 +11,7 @@ function calcolaPrezzoBiglietto(event) {
     const kmPasseggeroValue = Number(kmPasseggero.value);
     const etaPasseggeroValue = etaPasseggero.value;
     const prezzoBiglietto = kmPasseggeroValue * prezzoKm;
-    let prezzoBigliettoJunior = 0;
-    let prezzoBigliettoNormale = 0;
-    let prezzoBigliettoSenior = 0;
+    let prezzoBigliettoFinale;
 
     if (!nomePasseggeroValue || nomePasseggeroValue.trim() === '') {
         alert('INSERISCI UN NOME VALIDO')
@@ -32,11 +30,6 @@ function calcolaPrezzoBiglietto(event) {
         prezzoBigliettoSenior = prezzoBiglietto * scontoSenior;
 
     }
-
-    console.log(prezzoBigliettoJunior);
-    console.log(prezzoBigliettoNormale);
-    console.log(prezzoBigliettoSenior);
-    
 
 }
 

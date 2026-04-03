@@ -26,25 +26,28 @@
 <body>
     <main>
         <div class="container outer-wrapper">
-            <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
             <div class="row">
-                <div class="col">
-                    <form action="" id="formBiglietto" class="">
-                        <div class="col-md-6">
+                <h1>
+                    CALCOLA IL PREZZO DEL BIGLIETTO
+                </h1>
+                <div class="col form-wrapper container">
+                    <form action="" id="formBiglietto" class="row">
+                        <div class="col-4">
                             <label for="inputNameSurname" class="form-label">
                                 Nome e Cognome
                             </label>
-                            <input type="text" class="form-control" id="inputNameSurname">
+                            <input type="text" class="form-control" id="inputNameSurname"
+                                placeholder="Inserisci Nome e Cognome">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-4">
                             <label for="inputKm" class="form-label">
                                 km da percorrere
                             </label>
-                            <input type="text" class="form-control" id="inputKm">
+                            <input type="text" class="form-control" id="inputKm" placeholder="Inserisci km">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-4 mb-3">
                             <label for="selectAge" class="form-label">
-                                State
+                                Fascia di Età
                             </label>
                             <select id="selectAge" class="form-select">
                                 <option value="underage">
@@ -58,7 +61,7 @@
                                 </option>
                             </select>
                         </div>
-                        <div class="btn-container">
+                        <div class="col-12 text-center btn-container">
                             <button id="btnConferma">
                                 Conferma
                             </button>
@@ -67,6 +70,28 @@
                             </button>
                         </div>
                     </form>
+                </div>
+                <div id="bigliettoCompleto" class="col-12">
+                    <div class="info-wrapper">
+                        <h2>
+                            IL TUO BIGLIETTO
+                        </h2>
+                        <div class="side-info">
+                            <p id="nomePasseggero">
+
+                            </p>
+                        </div>
+                        <div class="info-passeggero">
+                            <p id="FasciaEtaPasseggero">
+
+                            </p>
+                        </div>
+                        <div class="side-info">
+                            <p id="prezzoBiglietto">
+
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
