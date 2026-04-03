@@ -12,4 +12,4 @@ const bottoneAnnulla = document.querySelector('#btnAnnulla');
 
 
 bottoneConferma.addEventListener('click', calcolaPrezzoBiglietto);
-bottoneAnnulla.addEventListener('click', )
+bottoneAnnulla.addEventListener('click', clickBottonReloadHandler);

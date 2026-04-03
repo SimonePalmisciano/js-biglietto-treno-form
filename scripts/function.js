@@ -39,3 +39,8 @@ function calcolaPrezzoBiglietto(event) {
     
 
 }
+
+// funzione che ricarica la pagina
+function clickBottonReloadHandler (){
+    location.reload();
+}
