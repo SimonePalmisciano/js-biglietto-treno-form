@@ -29,3 +29,222 @@ a {
     --bs-border-radius: 20px;
     border: none;
 }
+
+body {
+    height: 100vh;
+}
+
+main {
+    height: 100vh;
+}
+
+.outer-wrapper {
+    height: 100%;
+}
+
+/************************
+        CONTAINER
+************************/
+
+.form-background {
+    background-image: url('https://images.pexels.com/photos/31007800/pexels-photo-31007800.jpeg?cs=srgb&dl=pexels-shox-31007800.jpg&fm=jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-background form {
+    backdrop-filter: blur(5px);
+}
+
+/************************
+        BIGLIETTO
+************************/
+
+.biglietto-completo {
+    align-items: center;
+    background-color: beige;
+    padding: 40px;
+}
+
+.biglietto-completo h5 {
+    font-size: 28px;
+}
+
+.biglietto-completo p {
+    font-size: 20px;
+}
+
+#displayName {
+    text-transform: capitalize;
+}
+
+/************************
+        BIGLIETTO VINTAGE
+************************/
+.biglietto-completo {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 20px 24px;
+    background: #fdf2d8;
+    /* colore carta ingiallita */
+    border-radius: 14px;
+    border: 2px solid #c58a3b;
+    /* marrone caldo */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    font-family: "Courier New", monospace;
+    /* effetto ticket vecchio */
+}
+
+/* Linee tratteggiate tipo “perforazione” tra le 3 sezioni (solo da tablet in su) */
+@media (min-width: 768px) {
+
+    .biglietto-completo::before,
+    .biglietto-completo::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        border-left: 2px dashed rgba(150, 90, 30, 0.6);
+    }
+
+    .biglietto-completo::before {
+        left: 26%;
+    }
+
+    .biglietto-completo::after {
+        right: 26%;
+    }
+}
+
+/* Colonne interne del biglietto */
+.ticket-col {
+    padding: 16px 18px;
+}
+
+/* Colonna sinistra leggermente più scura */
+.ticket-left {
+    background: linear-gradient(135deg, #f3e2c1, #fdf2d8);
+    border-radius: 10px 0 0 10px;
+}
+
+/* Colonna centrale */
+.ticket-center {
+    background: #fdf7e7;
+}
+
+/* Colonna destra ancora più evidenziata */
+.ticket-right {
+    background: linear-gradient(135deg, #fdf2d8, #f3e2c1);
+    border-radius: 0 10px 10px 0;
+}
+
+/* Etichette (titoletti) */
+.ticket-label {
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #8b5a1f;
+    border-bottom: 1px solid rgba(139, 90, 31, 0.4);
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+}
+
+/* Etichette piccole */
+.ticket-small-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a56a26;
+    opacity: 0.9;
+    margin-bottom: 2px;
+}
+
+/* Valori principali */
+.ticket-value {
+    font-size: 1rem;
+    color: #3a2a16;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(139, 90, 31, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Nome passeggero in grande */
+.ticket-passenger-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2b2012;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(139, 90, 31, 0.4);
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+/* Prezzo in evidenza */
+.ticket-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #b03b1f;
+    /* rosso mattone vintage */
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 2px solid #b03b1f;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    min-width: 120px;
+}
+
+/* Posto con stile "etichetta" */
+.ticket-seat {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: #2b2012;
+    padding: 10px 12px;
+    border-radius: 999px;
+    border: 2px dashed rgba(139, 90, 31, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+}
+
+/* Valori piccoli (es. codice) */
+.ticket-small-value {
+    font-size: 0.9rem;
+    color: #3a2a16;
+    padding: 4px 6px;
+    border-radius: 4px;
+    border: 1px dashed rgba(139, 90, 31, 0.5);
+    display: inline-block;
+}
+
+/* Responsive: su schermi piccoli niente perforazione e arrotondamenti per col-12 */
+@media (max-width: 767.98px) {
+    .biglietto-completo {
+        padding: 16px 14px;
+    }
+
+    .ticket-col {
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    .biglietto-completo::before,
+    .biglietto-completo::after {
+        display: none;
+    }
+
+    .ticket-passenger-name {
+        font-size: 1.2rem;
+    }
+
+    .ticket-price {
+        font-size: 1.3rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .ticket-seat {
+        width: 100%;
+    }
+}

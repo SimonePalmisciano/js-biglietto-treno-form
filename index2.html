@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Simone Palmisciano">
+
+    <!-- NOME TITOLO DOCUMENTO -->
+    <title>Document</title>
+
+    <!-- ICONA DOCUMENTO -->
+    <link rel="icon" href="">
+
+    <!-- LINK CSS BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+    <!-- LINK FOGLIO DI STILE CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body class="text-center">
+    <main>
+        <div class="container">
+            <h1>
+                CALCOLA IL PREZZO DEL BIGLIETTO
+            </h1>
+            <form action="" id="formBiglietto" class="row">
+                <div class="col-4">
+                    <label for="inputNameSurname" class="form-label">
+                        Nome e Cognome
+                    </label>
+                    <input type="text" class="form-control" id="inputNameSurname"
+                        placeholder="Inserisci Nome e Cognome">
+                </div>
+                <div class="col-4">
+                    <label for="inputKm" class="form-label">
+                        km da percorrere
+                    </label>
+                    <input type="text" class="form-control" id="inputKm" placeholder="Inserisci km">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="selectAge" class="form-label">
+                        Fascia di Età
+                    </label>
+                    <select id="selectAge" class="form-select">
+                        <option value="underage">
+                            minorenne
+                        </option>
+                        <option value="adult">
+                            maggiorenne
+                        </option>
+                        <option value="over65">
+                            over 65
+                        </option>
+                    </select>
+                </div>
+                <div class="col-12 text-center btn-container">
+                    <button id="btnConferma">
+                        Conferma
+                    </button>
+                    <button id="btnAnnulla">
+                        Annulla
+                    </button>
+                </div>
+            </form>
+            
+            <div class="row biglietto-completo">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <div>
+                                <h5>
+                                    Data
+                                </h5>
+                                <p id="displayData"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h5>
+                                Nome Cognome Passeggero
+                            </h5>
+                            <p id="dispalyName"></p>
+                        </div>
+                        <div class="col">
+                            <h5>
+                                Fascia di Età
+                            </h5>
+                            <p id="displayAge"></p>
+                        </div>
+                        <div class="col">
+                            <h5>
+                                Costo Biglietto
+                            </h5>
+                            <p id="displayPrice"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h5>
+                                Direzione
+                            </h5>
+                            <p>
+                                Verso la fine
+                            </p>
+                        </div>
+                        <div class="col">
+                            <h5>
+                                Posto
+                            </h5>
+                            <p>
+                                22C
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- LINK SCRIPT -->
+    <script src="./scripts/function.js"></script>
+    <script src="./scripts/script.js"></script>
+
+    <!-- LINK BOOTSTRAP SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
